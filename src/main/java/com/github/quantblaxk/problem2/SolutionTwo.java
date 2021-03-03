@@ -5,7 +5,7 @@ package com.github.quantblaxk.problem2;
 //      uneven + even = uneven
 //
 //  numbers: 1 --> 1 --> 2 --> 3 --> 5 --> 8 --> 13 --> 21 --> 34 --> ...
-//  even:    0 --> 0 --> 1 --> 0 --> 0 --> 1 --> 0  --> 0  --> 1 --> ...    (0 = uneven | 1 = even)
+//  even:    0 --> 0 --> 1 --> 0 --> 0 --> 1 --> 0  --> 0  --> 1  --> ...    (0 = uneven | 1 = even)
 //           => every third fibonacci number is even
 public class SolutionTwo {
 
