@@ -1,19 +1,21 @@
 package com.github.quantblaxk.problem2;
 
-/**
- * @author QuantBlaxk
- *
- * Problem: https://projecteuler.net/problem=2
- */
-public class SolutionOne {
+//  needed rules:
+//      uneven + uneven = even
+//      uneven + even = uneven
+//
+//  numbers: 1 --> 1 --> 2 --> 3 --> 5 --> 8 --> 13 --> 21 --> 34 --> ...
+//  even:    0 --> 0 --> 1 --> 0 --> 0 --> 1 --> 0  --> 0  --> 1 --> ...    (0 = uneven | 1 = even)
+//           => every third fibonacci number is even
+public class SolutionTwo {
 
     public static void main(String[] args) {
 
         long fibOne = 0;
-        long fibTwo = 1;
+        long fibTwo = 2;
         //set default max_value to four-million
         int maxValue = 4000000;
-        int evenResult = 0;
+        long evenResult = 2;
 
         //Required time (start value)
         long timeStart = System.nanoTime();
@@ -30,8 +32,8 @@ public class SolutionOne {
 
         //loop until the new fibonacci number is bigger than max_value
         while (true) {
-            //next fib number
-            long newFib = fibOne + fibTwo;
+            //next even fib number
+            long newFib = 4 * fibTwo + fibOne;
             //break loop if new fib number is bigger than max_value
             if (newFib > maxValue) {
                 break;
@@ -41,10 +43,8 @@ public class SolutionOne {
             //new fib two set to old fib one + old fib two
             fibTwo = newFib;
 
-            //if new fib is even, add it to even result
-            if(fibTwo % 2 == 0) {
-                evenResult += fibTwo;
-            }
+            //add fib two to even result
+            evenResult += fibTwo;
         }
         //output the result
         System.out.println(evenResult);
@@ -52,7 +52,7 @@ public class SolutionOne {
         //Required time (end value)
         long timeEnd = System.nanoTime();
         //output the required time
-        System.out.printf("Required time: %d milliseconds", (timeEnd - timeStart)/1000000);
+        System.out.printf("Required time: %d milliseconds", (timeEnd - timeStart) / 1000000);
 
     }
 
