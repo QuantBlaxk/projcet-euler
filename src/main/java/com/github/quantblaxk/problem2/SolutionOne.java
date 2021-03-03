@@ -1,4 +1,4 @@
-package com.github.quantblaxk.problemtwo;
+package com.github.quantblaxk.problem2;
 
 /**
  * @author QuantBlaxk
