@@ -1,5 +1,10 @@
 package com.github.quantblaxk.problem2;
 
+/**
+ * @author QuantBlaxk
+ *
+ * Problem: https://projecteuler.net/problem=2
+ */
 //  needed rules:
 //      uneven + uneven = even
 //      uneven + even = uneven
